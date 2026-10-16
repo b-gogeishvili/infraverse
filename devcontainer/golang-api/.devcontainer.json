@@ -1,0 +1,5 @@
+{
+  "image": "golang:1.27",
+  "runArgs": ["--userns=keep-id", "--security-opt=label=disable"],
+  "remoteUser": "root"
+}
