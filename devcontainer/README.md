@@ -36,3 +36,5 @@ devpod context set-options -o SSH_CONFIG_PATH=$HOME/.ssh/devpod_config
 # Include ~/.ssh/devpod_config <- should be written before any host block
 ```
 
+> Since Fedora uses SELinux, I had this issue on Fedora Atomic Sway - https://devpod.sh/docs/troubleshooting/linux-troubleshooting#using-selinux
+

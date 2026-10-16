@@ -1,5 +1,9 @@
 {
-  "image": "golang:1.27",
-  "runArgs": ["--userns=keep-id", "--security-opt=label=disable"],
-  "remoteUser": "root"
+    "image": "golang:1.27",
+    "remoteUser": "root",
+    "workspaceMount": "",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "runArgs": [
+        "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"
+    ]
 }
