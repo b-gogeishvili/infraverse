@@ -1,6 +1,6 @@
 # Development Containers
 
-*devcontainer* is an open specification to use a container as a development environment.
+**devcontainer** is an open specification to use a container as a development environment.
 It can be used to run an application, to separate tools needed for the specific project from host OS, to create reproducible environments, etc.
 
 There are several clients that support dev container specification.
