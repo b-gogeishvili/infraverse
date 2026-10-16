@@ -1,0 +1,21 @@
+{
+    "image": "golang:1.27",
+    "containerEnv": {
+        "HTTP_PORT": "8080"
+    },
+    "features": {
+        "ghcr.io/guiyomh/features/golangci-lint:0": {}
+    },
+    "forwardPorts": [
+        "${containerEnv:HTTP_PORT}"
+    ],
+    "updateContentCommand": "gofmt -w main.go",
+    "postCreateCommand": "go mod download",
+
+    "remoteUser": "root",
+    "workspaceMount": "",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "runArgs": [
+        "--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"
+    ]
+}
